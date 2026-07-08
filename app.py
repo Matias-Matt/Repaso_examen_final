@@ -25,7 +25,6 @@ while True:
     print("6. Mostrar productos")
     print("7. Salir")
     print("====================================")
-
     opcion = leer_opcion()
 
     if opcion == 1:
@@ -38,7 +37,7 @@ while True:
                 minimo = int(input("Ingrese precio mínimo: "))
                 maximo = int(input("Ingrese precio máximo: "))
                 break
-            except:
+            except ValueError:
                 print("Debe ingresar números enteros.")
         buscar_precio(minimo, maximo, productos, inventario)
         
@@ -51,7 +50,7 @@ while True:
                     print("Precio actualizado.")
                 else:
                     print("Código inexistente.")
-            except:
+            except ValueError:
                 print("Precio inválido.")
             continuar = input("¿Desea continuar? (s/n): ")
             if continuar.lower() != "s":
@@ -65,7 +64,7 @@ while True:
             try:
                 precio = int(input("Precio: "))
                 break
-            except:
+            except ValueError:
                 print("Precio inválido.")
         disponible = input("Disponible (s/n): ")
         while True:
@@ -73,7 +72,7 @@ while True:
                 stock = int(input("Stock: "))
                 vendidos = int(input("Vendidos: "))
                 break
-            except:
+            except ValueError:
                 print("Debe ingresar números.")
         if agregar_producto(codigo, nombre, categoria, precio,
                             disponible, stock, vendidos,
