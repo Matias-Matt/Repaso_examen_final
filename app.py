@@ -14,10 +14,8 @@ inventario = {
     "P104": [8, 25]
 }
 
-print(buscar_codigo("P101", productos))
-print(buscar_codigo("p101", productos))
-print(buscar_codigo("P999", productos))
+print(validar_nombre("Cuaderno"))
+print(validar_nombre(""))
 
-print(actualizar_precio("P101", 3500, productos))
-
-mostrar_productos(productos, inventario)
+print(validar_precio(100))
+print(validar_precio(-5))
